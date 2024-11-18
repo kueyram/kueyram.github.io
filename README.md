@@ -42,6 +42,7 @@ In my portfolio, you’ll find a diverse range of projects showcasing my ability
 - [Aid and Death Toll Prediction in the Ukraine vs. Russia Conflict](https://github.com/kueyram/Analysis-of-Ukraine-vs-Russia-conflict)
 - [Optimizing Equipment Performance through Predictive Maintenance Strategies](https://github.com/kueyram/Predictive-Maintenance)
 - [Titanic Data Analysis](https://github.com/kueyram/Titanic-Data-Analysis)
+- [Automatic License Plate Reader](https://github.com/kueyram/Automatic-License-Plate-Detection)
 
 
 
