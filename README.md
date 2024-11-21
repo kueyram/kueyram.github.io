@@ -43,6 +43,11 @@ In my portfolio, you’ll find a diverse range of projects showcasing my ability
 - [Optimizing Equipment Performance through Predictive Maintenance Strategies](https://github.com/kueyram/Predictive-Maintenance)
 - [Titanic Data Analysis](https://github.com/kueyram/Titanic-Data-Analysis)
 - [Automatic License Plate Reader](https://github.com/kueyram/Automatic-License-Plate-Detection)
+- [Fake News Detection using machine learning](https://github.com/kueyram/Fake-News-Detection)
+- [Customer sentiment analysis](https://github.com/kueyram/Customer-sentiment-analysis)
+- [Fraud-Detection](https://github.com/kueyram/Fraud-Detection)
+- [Course-Recommendation](https://github.com/kueyram/Course-Recommendation)
+- [Sales Forecasting Model](https://github.com/kueyram/Sales-Forecasting-Model)
 
 
 
