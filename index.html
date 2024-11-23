@@ -4,9 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eyram Kueviakoe's Portfolio</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Optional: Link to a CSS file for styles -->
+
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Optional: Link to a CSS file for styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Basic styles -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #0078D4;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #0078D4;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        ul li a {
+            font-size: 18px;
+            text-decoration: none;
+            color: #0078D4;
+        }
+
+        ul li p {
+            font-size: 14px;
+            margin-top: 5px;
+            color: #555;
+        }
+
+        .badge {
+            margin-right: 10px;
+        }
+
+        footer {
+            background-color: #0078D4;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .tab-buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .tab-button {
+            background-color: #0078D4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .tab-button:hover {
+            background-color: #005fa3;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .active-tab {
+            display: block;
+        }
+    </style>
 </head>
 <body>
+
     <header>
         <h1>Eyram Kueviakoe's Portfolio</h1>
     </header>
@@ -48,53 +162,76 @@
 
     <section id="projects">
         <h2>Work/Projects 🌟</h2>
-        <p>In my portfolio, you’ll find a diverse range of projects showcasing my ability to tackle real-world data challenges. Some of the key projects include:</p>
-        <ul>
-            <li>
-                <a href="https://github.com/kueyram/Course-Recommendation">Course Recommendation System using Python and Streamlit</a>
-                <p>A recommendation system built using Python and Streamlit to suggest courses based on users' preferences and past learning experiences.</p>
-            </li>
-            <li>
-                <a href="https://github.com/kueyram/Analysis-of-Ukraine-vs-Russia-conflict">Aid and Death Toll Prediction in the Ukraine vs. Russia Conflict</a>
-                <p>Analyzing the impact of the Ukraine-Russia conflict using machine learning models to predict the aid needed and estimate the death toll.</p>
-            </li>
-            <li>
-                <a href="https://github.com/kueyram/Predictive-Maintenance">Optimizing Equipment Performance through Predictive Maintenance Strategies</a>
-                <p>Using historical data and predictive analytics to identify potential equipment failures and optimize maintenance schedules, saving time and cost.</p>
-            </li>
-            <li>
-                <a href="https://github.com/kueyram/Titanic-Data-Analysis">Titanic Data Analysis</a>
-                <p>Performed exploratory data analysis (EDA) on the Titanic dataset to understand factors influencing survival rates, applying machine learning for predictions.</p>
-            </li>
-            <li>
-                <a href="https://github.com/kueyram/Automatic-License-Plate-Detection">Automatic License Plate Reader</a>
-                <p>A machine learning-based solution that detects and recognizes license plates in images, providing an efficient tool for security and access control.</p>
-            </li>
-            <li>
-                <a href="https://github.com/kueyram/Fake-News-Detection">Fake News Detection using Machine Learning</a>
-                <p>Built a classification model to identify and classify news articles as real or fake using NLP techniques and machine learning algorithms.</p>
-            </li>
-            <li>
-                <a href="https://github.com/kueyram/Customer-sentiment-analysis">Customer Sentiment Analysis</a>
-                <p>Analyzed customer feedback to determine sentiment (positive, negative, neutral) using NLP and machine learning to provide insights for business decisions.</p>
-            </li>
-            <li>
-                <a href="https://github.com/kueyram/Fraud-Detection">Fraud Detection</a>
-                <p>Developed a fraud detection system that identifies suspicious activity in financial transactions using machine learning and data mining techniques.</p>
-            </li>
-            <li>
-                <a href="https://github.com/kueyram/Course-Recommendation">Course-Recommendation</a>
-                <p>Developed an intelligent recommendation engine to suggest relevant courses to learners based on their interests, past courses, and learning patterns.</p>
-            </li>
-            <li>
-                <a href="https://github.com/kueyram/Sales-Forecasting-Model">Sales Forecasting Model</a>
-                <p>Created a sales forecasting model using time series analysis and machine learning to predict future sales and assist businesses in inventory management.</p>
-            </li>
-        </ul>
-    </section>
-    
 
-    <footer>
+        <div class="tab-buttons">
+            <button class="tab-button" onclick="showTab('course-recommendation')">
+                <i class="fas fa-book"></i> Course Recommendation
+            </button>
+            <button class="tab-button" onclick="showTab('aid-death-toll')">
+                <i class="fas fa-flag"></i> Aid & Death Toll
+            </button>
+            <button class="tab-button" onclick="showTab('predictive-maintenance')">
+                <i class="fas fa-cogs"></i> Predictive Maintenance
+            </button>
+            <button class="tab-button" onclick="showTab('titanic-analysis')">
+                <i class="fas fa-ship"></i> Titanic Analysis
+            </button>
+            <button class="tab-button" onclick="showTab('license-plate')">
+                <i class="fas fa-car"></i> License Plate Reader
+            </button>
+            <button class="tab-button" onclick="showTab('fake-news')">
+                <i class="fas fa-newspaper"></i> Fake News Detection
+            </button>
+            <button class="tab-button" onclick="showTab('customer-sentiment')">
+                <i class="fas fa-comments"></i> Sentiment Analysis
+            </button>
+            <button class="tab-button" onclick="showTab('fraud-detection')">
+                <i class="fas fa-user-shield"></i> Fraud Detection
+            </button>
+            <button class="tab-button" onclick="showTab('sales-forecasting')">
+                <i class="fas fa-chart-line"></i> Sales Forecasting
+            </button>
+        </div>
+
+        <div id="course-recommendation" class="tab-content">
+            <a href="https://github.com/kueyram/Course-Recommendation">Course Recommendation System using Python and Streamlit</a>
+            <p>A recommendation system built using Python and Streamlit to suggest courses based on users' preferences and past learning experiences.</p>
+        </div>
+        <div id="aid-death-toll" class="tab-content">
+            <a href="https://github.com/kueyram/Analysis-of-Ukraine-vs-Russia-conflict">Aid and Death Toll Prediction in the Ukraine vs. Russia Conflict</a>
+            <p>Analyzing the impact of the Ukraine-Russia conflict using machine learning models to predict the aid needed and estimate the death toll.</p>
+        </div>
+        <div id="predictive-maintenance" class="tab-content">
+            <a href="https://github.com/kueyram/Predictive-Maintenance">Optimizing Equipment Performance through Predictive Maintenance Strategies</a>
+            <p>Using historical data and predictive analytics to identify potential equipment failures and optimize maintenance schedules, saving time and cost.</p>
+        </div>
+        <div id="titanic-analysis" class="tab-content">
+            <a href="https://github.com/kueyram/Titanic-Data-Analysis">Titanic Data Analysis</a>
+            <p>Performed exploratory data analysis (EDA) on the Titanic dataset to understand factors influencing survival rates, applying machine learning for predictions.</p>
+        </div>
+        <div id="license-plate" class="tab-content">
+            <a href="https://github.com/kueyram/Automatic-License-Plate-Detection">Automatic License Plate Reader</a>
+            <p>A machine learning-based solution that detects and recognizes license plates in images, providing an efficient tool for security and access control.</p>
+        </div>
+        <div id="fake-news" class="tab-content">
+            <a href="https://github.com/kueyram/Fake-News-Detection">Fake News Detection using Machine Learning</a>
+            <p>Built a classification model to identify and classify news articles as real or fake using NLP techniques and machine learning algorithms.</p>
+        </div>
+        <div id="customer-sentiment" class="tab-content">
+            <a href="https://github.com/kueyram/Customer-sentiment-analysis">Customer Sentiment Analysis</a>
+            <p>Analyzed customer feedback to determine sentiment (positive, negative, neutral) using NLP and machine learning to provide insights for business decisions.</p>
+        </div>
+        <div id="fraud-detection" class="tab-content">
+            <a href="https://github.com/kueyram/Fraud-Detection">Fraud Detection</a>
+            <p>Developed a fraud detection system that identifies suspicious activity in financial transactions using machine learning and data mining techniques.</p>
+        </div>
+        <div id="sales-forecasting" class="tab-content">
+            <a href="https://github.com/kueyram/Sales-Forecasting-Model">Sales Forecasting Model</a>
+            <p>Created a sales forecasting model using time series analysis and machine learning to predict future sales and assist businesses in inventory management.</p>
+        </div>
+    </section>
+
+    <section id="contact2">
         <h2>Let's Connect! 🤝</h2>
         <p>I’d love to connect with you. Feel free to reach out on any of the following platforms:</p>
         <div style="display: flex; justify-content: center; gap: 20px; align-items: center; margin-top: 20px;">
@@ -113,8 +250,22 @@
                 <p style="font-size: 1.1rem; font-weight: bold; color: #D14836; margin-left: 10px;">eyram.kueviakoe@outlook.com</p>
             </div>
         </div>
+        <br><br>
+    </section>
+
+
+    
+    <footer>
+        <p>&copy; 2024 Eyram Kueviakoe | <a href="https://github.com/kueyram">GitHub</a> | <a href="https://www.linkedin.com/in/eyramkueviakoe">LinkedIn</a></p>
     </footer>
-    
-    
+
+    <script>
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active-tab'));
+            document.getElementById(tabId).classList.add('active-tab');
+        }
+    </script>
+
 </body>
 </html>
